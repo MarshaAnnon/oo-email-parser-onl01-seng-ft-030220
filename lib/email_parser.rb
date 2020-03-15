@@ -5,10 +5,11 @@
 require 'csv'
 class EmailAddressParser
 
-  attr_accessor :email_addresses
-  @@all = []
+  attr_accessor :emails
 
-  def self.create(email)
+  def initialize
+    @emails = emails
+  end
 
 
 
