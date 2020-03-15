@@ -4,15 +4,17 @@
 # or whitespace (' ').
 require 'csv'
 class EmailAddressParser
-
   attr_accessor :email
 
-  def initialize(email)
+  def self.new_from_csv(csv_data)
+    rows = csv_data.split("\n")
+    email = rows.collect do |row|
+    data = row.split(", ")
+    email = data[0]
+    email = self.new
     @email = email
+    email
+    end
+    email
   end
-
-  def parse
-    
-  end
-
 end
